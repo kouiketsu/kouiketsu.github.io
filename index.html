@@ -23,10 +23,10 @@
     <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
-    
+
     <script src="/libs/jquery/jquery.min.js"></script>
-    
-<meta name="generator" content="Hexo 4.2.0"></head>
+
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -234,7 +234,10 @@
         
     </nav>
 
+
+
 </header>
+
 
     
 <style>
@@ -296,6 +299,8 @@
 
             <div class="description center-align">
                 
+                <!--
+                自带的句子
                 <span id="subtitle"></span>
                 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
                 <script>
@@ -308,6 +313,17 @@
                         showCursor: true
                     });
                 </script>
+
+                -->
+
+
+                <!-- 调用一言的api -->
+                <div>
+                    <script type="text/javascript" src="https://api.imjad.cn/hitokoto/?cat=&charset=utf-8&length=&encode=js&fun=sync&source="></script>
+                    <script>hitokoto()</script>
+                </div>
+
+
                 
             </div>
         </div>

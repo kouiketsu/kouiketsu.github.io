@@ -547,6 +547,7 @@ header .go-back i {
 
 .index-cover {
     height: 100vh;
+	color: #fff;
 }
 
 .post-cover {
@@ -596,7 +597,8 @@ header .go-back i {
     font-weight: 400;
 }
 
-@-webkit-keyframes rainbow {
+/* 关闭背景渐变色 眼睛疼 */
+/* @-webkit-keyframes rainbow {
 
     0%,
     100% {
@@ -686,7 +688,7 @@ header .go-back i {
         background: -moz-linear-gradient(135deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(2233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
     }
-}
+} */
 
 .index-card {
     margin-top: -10px;

@@ -172,7 +172,7 @@ code {
     z-index: 1;
     filter: invert(50%);
     cursor: pointer;
-} 
+}
 
 .code-expand {
     position: absolute;
@@ -547,7 +547,7 @@ header .go-back i {
 
 .index-cover {
     height: 100vh;
-	color: #fff;
+    color: #fff;
 }
 
 .post-cover {
@@ -1163,6 +1163,12 @@ article .article-tags .chip {
     color: #42b983;
     font-weight: 500;
 }
+
+/* 文章标题居中 */
+#articleContent h1 {
+    text-align: center;
+}
+
 
 #articleContent p {
     margin: 2px 2px 10px;

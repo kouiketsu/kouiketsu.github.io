@@ -486,10 +486,11 @@ steps <span class="token operator">=</span> <span class="token number">1000</spa
 </li>
 </ul>
 <h3 id="一次模拟多个随机漫步"><a href="#一次模拟多个随机漫步" class="headerlink" title="一次模拟多个随机漫步"></a>一次模拟多个随机漫步</h3><h1 id="pandas入门"><a href="#pandas入门" class="headerlink" title="pandas入门"></a>pandas入门</h1><ul>
-<li><p>pandas引入约定</p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> pandas <span class="token keyword">import</span> Series<span class="token punctuation">,</span> DataFrame
+<li>pandas引入约定<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> pandas <span class="token keyword">import</span> Series<span class="token punctuation">,</span> DataFrame
 <span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd</code></pre>
-<h2 id="pandas的数据结构介绍"><a href="#pandas的数据结构介绍" class="headerlink" title="pandas的数据结构介绍"></a>pandas的数据结构介绍</h2></li>
+</li>
+</ul>
+<h2 id="pandas的数据结构介绍"><a href="#pandas的数据结构介绍" class="headerlink" title="pandas的数据结构介绍"></a>pandas的数据结构介绍</h2><ul>
 <li><p>两个主要数据结构</p>
 <ul>
 <li>Series</li>
@@ -526,12 +527,12 @@ steps <span class="token operator">=</span> <span class="token number">1000</spa
 <li>返回的Series拥有原DF相同的索引且name属性也被设置好了</li>
 <li>列可以通过赋值的方式进行修改</li>
 <li>将列表或数组赋值给某列时,其长度必须跟DF长度相匹配</li>
-<li>为不存在的列赋值会创建出一个心裂</li>
+<li>为不存在的列赋值会创建出一个新列</li>
 <li>关键字del用于删除列</li>
 <li>PS：通过索引方式返回的列只是相应数据的试图而已,并不是副本</li>
 <li>参数传入嵌套字典(外层字典的键作为列,内层键则作为行索引)</li>
 <li>DataFrame构造函数所能接受的各种数据(表5-1)<ul>
-<li><img src="http://localhost:4000/images/table_5_1.jpg" alt="image-20200202174920941"></li>
+<li><img src="https://kouiketsu.github.io/images/table_5_1.jpg" alt="image-20200202174920941"></li>
 </ul>
 </li>
 <li>可以设置index和columns的name属性,会显示出来</li>
@@ -548,10 +549,14 @@ steps <span class="token operator">=</span> <span class="token number">1000</spa
 <li>表5-2</li>
 </ul>
 </li>
+<li>每个索引都有一些方法和属性<ul>
+<li>表5-3</li>
 </ul>
 </li>
 </ul>
-<script>
+</li>
+</ul>
+<h2 id="基本功能"><a href="#基本功能" class="headerlink" title="基本功能"></a>基本功能</h2><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -943,7 +948,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">1.3k</span>&nbsp;字
+                class="white-color">1.4k</span>&nbsp;字
             
             
             

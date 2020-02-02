@@ -4,8 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, that&#39;s all">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="Python数据分析, that&#39;s all">
+    <meta name="description" content="numpy基础什么是数据分析？
+数据分析是指用适当的统计分析方法对收集来的大量数据进行分析，将它们加以汇总和理解并消化，以求最大化地开发数据的功能，发挥数据的作用。
+
+数据分析常用的库
+1、NumPy (Numerical Python) ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hello World | that&#39;s all</title>
+    <title>Python数据分析 | that&#39;s all</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -243,12 +247,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/images/python_data_analysis.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">Python数据分析</h1>
                 </div>
             </div>
         </div>
@@ -363,12 +367,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%95%B0%E6%8D%AE-%E5%88%86%E6%9E%90/">
+                                <span class="chip bg-color">数据 分析</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Python/" class="post-category">
+                                Python
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -377,21 +394,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-11
+                    2020-02-01
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-01-11
+                    2020-02-02
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    125
+                    1.2k
                 </div>
                 
 
@@ -409,15 +426,131 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <h1 id="numpy基础"><a href="#numpy基础" class="headerlink" title="numpy基础"></a>numpy基础</h1><h2 id="什么是数据分析？"><a href="#什么是数据分析？" class="headerlink" title="什么是数据分析？"></a>什么是数据分析？</h2><ul>
+<li>数据分析是指用适当的统计分析方法对收集来的大量数据进行分析，将它们加以汇总和理解并消化，以求最大化地开发数据的功能，发挥数据的作用。</li>
+</ul>
+<h2 id="数据分析常用的库"><a href="#数据分析常用的库" class="headerlink" title="数据分析常用的库"></a>数据分析常用的库</h2><ul>
+<li>1、NumPy (Numerical Python) 基础数值算法</li>
+<li>2、SciPy(Scientific Python) 科学计算</li>
+<li>3、matplotlib 数据可视化</li>
+<li>4、pandas 序列高级函数</li>
+</ul>
+<h2 id="用于数组的文件输入和输出"><a href="#用于数组的文件输入和输出" class="headerlink" title="用于数组的文件输入和输出"></a>用于数组的文件输入和输出</h2><ul>
+<li><p>numpy能够读写磁盘上的文本数据或二进制数据</p>
+<h3 id="将数组以二进制格式保存到磁盘"><a href="#将数组以二进制格式保存到磁盘" class="headerlink" title="将数组以二进制格式保存到磁盘"></a>将数组以二进制格式保存到磁盘</h3><ul>
+<li>np.load 读</li>
+<li>np.save 写</li>
+<li>np.savez 写多个</li>
+</ul>
+<h3 id="获取文本文件"><a href="#获取文本文件" class="headerlink" title="获取文本文件"></a>获取文本文件</h3><ul>
+<li>可选选项: 指定各种分隔符、针对特定列的转换器函数、需要跳过的行数etc</li>
+<li>np.read_csv 读取逗号分隔符文件</li>
+<li>np.read_table</li>
+<li>np.loadtxt 将数据加载到numpy数组中</li>
+<li>np.genfromtxt 类似loadtxt</li>
+<li>np.savetxt 与loadtxt相反,将数组写到文件中</li>
+</ul>
+</li>
+</ul>
+<h2 id="线性代数"><a href="#线性代数" class="headerlink" title="线性代数"></a>线性代数</h2><ul>
+<li>线性代数(linear algebra)是关于向量空间和线性映射的一个数学分支。它包括对线、面和子空间的研究，同时也涉及到所有的向量空间的一般性质。</li>
+<li>x.dot(y) == np.dot(x, y)(用于矩阵乘法)  dot既是一个数组方法也是numpy函数</li>
+</ul>
+<h2 id="随机数生成"><a href="#随机数生成" class="headerlink" title="随机数生成"></a>随机数生成</h2><ul>
+<li>numpy.random模块<ul>
+<li>normal 标准正态分布的4*4样本数组<ul>
+<li>np.random.normal(size=(4, 4))</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="范例-随机漫步"><a href="#范例-随机漫步" class="headerlink" title="范例-随机漫步"></a>范例-随机漫步</h2><ul>
+<li><p>例子： 从0开始,步长1和-1出现的概率相等,实现1000步的随机漫步</p>
+<ul>
+<li><p>1、纯Python实现</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> random
+position <span class="token operator">=</span> <span class="token number">0</span>
+walk <span class="token operator">=</span> <span class="token punctuation">[</span>position<span class="token punctuation">]</span>
+steps <span class="token operator">=</span> <span class="token number">1000</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>steps<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  step <span class="token operator">=</span> <span class="token number">1</span> <span class="token keyword">if</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">else</span> <span class="token operator">-</span><span class="token number">1</span>
+  position <span class="token operator">+=</span> step
+  walk<span class="token punctuation">.</span>append<span class="token punctuation">(</span>position<span class="token punctuation">)</span></code></pre>
+</li>
+<li><p>2、numpy实现</p>
+</li>
+</ul>
+</li>
+<li><p>例子：首次穿越时间，即随机漫步过程中第一个到达某个特定值的时间</p>
+</li>
+</ul>
+<h3 id="一次模拟多个随机漫步"><a href="#一次模拟多个随机漫步" class="headerlink" title="一次模拟多个随机漫步"></a>一次模拟多个随机漫步</h3><h1 id="pandas入门"><a href="#pandas入门" class="headerlink" title="pandas入门"></a>pandas入门</h1><ul>
+<li><p>pandas引入约定</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> pandas <span class="token keyword">import</span> Series<span class="token punctuation">,</span> DataFrame
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd</code></pre>
+<h2 id="pandas的数据结构介绍"><a href="#pandas的数据结构介绍" class="headerlink" title="pandas的数据结构介绍"></a>pandas的数据结构介绍</h2></li>
+<li><p>两个主要数据结构</p>
+<ul>
+<li>Series</li>
+<li>DataFrame</li>
+</ul>
+</li>
+<li><p>Series</p>
+<ul>
+<li>类似于一维数组的对象</li>
+<li>由一组数据(各种numpy数据类型)和与之相关的数据标签(索引)组成</li>
+<li>字符串表现形式：索引在左,值在右</li>
+<li>不指定索引(自动创建一个0到len-1的整数型索引)</li>
+<li>可以通过索引取单个或多个值</li>
+<li>numpy数组运算都会保留索引和值之间的链接</li>
+<li>可以将Series堪称是一个定长的有序字典(索引值到数据值的一个映射)</li>
+<li>也可以通过Python字典来创建Series(一个字典：索引就是键)</li>
+<li>isnull和notnull函数可用于检测缺失数据</li>
+<li>它在算数运算中会自动对齐不同索引的数据</li>
+<li>Series对象本身及其索引都有一个name属性,该属性跟pandas其他的关键功能关系非常密切</li>
+<li>Series的索引可以通过赋值的方式就地修改</li>
+</ul>
+</li>
+<li><p>DataFrame</p>
+<ul>
+<li>一个表格型的数据结构,既有行索引也有列索引</li>
+<li>数据是以一个或多个二维块存放的(而不是列表、字典或别的一维数据结构)</li>
+<li>构建DataFrame<ul>
+<li>直接传入一个由等长列表或numpy数组组成的字典</li>
+<li>如果指定了列序列(colums=””),列就会按照指定顺序进行排列</li>
+<li>传入的列在数据中找不到就会产生NA值</li>
+</ul>
+</li>
+<li>通过类似字典标记的方式或属性的方式获取DF列为一个Series</li>
+<li>返回的Series拥有原DF相同的索引且name属性也被设置好了</li>
+<li>列可以通过赋值的方式进行修改</li>
+<li>将列表或数组赋值给某列时,其长度必须跟DF长度相匹配</li>
+<li>为不存在的列赋值会创建出一个心裂</li>
+<li>关键字del用于删除列</li>
+<li>PS：通过索引方式返回的列只是相应数据的试图而已,并不是副本</li>
+<li>参数传入嵌套字典(外层字典的键作为列,内层键则作为行索引)</li>
+<li>DataFrame构造函数所能接受的各种数据(表5-1)<ul>
+<li><img src="http://localhost:4000/images/table_5_1.jpg" alt="image-20200202174920941"></li>
+</ul>
+</li>
+<li>可以设置index和columns的name属性,会显示出来</li>
+<li>df.values属性以二维ndarray形式返回数据</li>
+<li>df各列数据类型不同,则数组数据类型就会选择能兼容所有列的数据类型</li>
+</ul>
+</li>
+<li><p>索引对象</p>
+<ul>
+<li>负责管理轴标签和其他元数据(轴名称etc)</li>
+<li>构建Series和DF,所用到的任何数组或其他的序列的标签都会被转换成一个Index</li>
+<li>Index对象是不可修改的</li>
+<li>pandas中主要的Index对象<ul>
+<li>表5-2</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -461,7 +594,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://kouiketsu.github.io/2020/01/11/hello-world/">https://kouiketsu.github.io/2020/01/11/hello-world/</a>
+                    <a href="https://kouiketsu.github.io/2020/02/01/python-shu-ju-fen-xi/">https://kouiketsu.github.io/2020/02/01/python-shu-ju-fen-xi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -498,7 +631,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E6%95%B0%E6%8D%AE-%E5%88%86%E6%9E%90/">
+                                    <span class="chip bg-color">数据 分析</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -537,9 +674,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/02/01/python-shu-ju-fen-xi/">
                     <div class="card-image">
@@ -560,9 +698,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-01
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -575,6 +713,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -590,7 +729,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2020/01/11/hello-world/">
@@ -620,7 +759,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>

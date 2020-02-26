@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="记一次FastFDS的配置以及与Nginx进行交互, that&#39;s all">
+    <meta name="keywords" content="记一次FastDFS的配置以及与Nginx进行交互, that&#39;s all">
     <meta name="description" content="1-内容简介1.1-什么是FastDFS
 FastDFS是一个开源高性能分布式文件系统(DFS)。它的主要功能包括:文件存储、文件同步、文件访问,和设计高容量和负载平衡。
 
@@ -17,7 +17,7 @@ FastDFS是一个开源高性能分布式文件系统(DFS)。它的主要功能�
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>记一次FastFDS的配置以及与Nginx进行交互 | that&#39;s all</title>
+    <title>记一次FastDFS的配置以及与Nginx进行交互 | that&#39;s all</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -247,12 +247,12 @@ FastDFS是一个开源高性能分布式文件系统(DFS)。它的主要功能�
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">记一次FastFDS的配置以及与Nginx进行交互</h1>
+                    <h1 class="description center-align post-title">记一次FastDFS的配置以及与Nginx进行交互</h1>
                 </div>
             </div>
         </div>
@@ -408,7 +408,7 @@ FastDFS是一个开源高性能分布式文件系统(DFS)。它的主要功能�
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    599
+                    969
                 </div>
                 
 
@@ -435,7 +435,8 @@ FastDFS是一个开源高性能分布式文件系统(DFS)。它的主要功能�
 <h2 id="2-Ubuntu-16-04-系统的配置"><a href="#2-Ubuntu-16-04-系统的配置" class="headerlink" title="2-Ubuntu(16.04)系统的配置"></a>2-Ubuntu(16.04)系统的配置</h2><ul>
 <li>在这里强烈建议使用Vmware的用户网络使用nat模式，而不要使用桥接模式。</li>
 </ul>
-<h3 id="2-1-安装FDFS时系统所需依赖，防止后面文件make出错"><a href="#2-1-安装FDFS时系统所需依赖，防止后面文件make出错" class="headerlink" title="2.1-安装FDFS时系统所需依赖，防止后面文件make出错"></a>2.1-安装FDFS时系统所需依赖，防止后面文件make出错</h3><ul>
+<h3 id="2-1-安装FDFS时系统所需依赖"><a href="#2-1-安装FDFS时系统所需依赖" class="headerlink" title="2.1-安装FDFS时系统所需依赖"></a>2.1-安装FDFS时系统所需依赖</h3><ul>
+<li>防止后面文件make出错</li>
 <li>pcre库<pre class=" language-shell"><code class="language-shell">sudo apt-get install libpcre3 libpcre3-dev  </code></pre>
 <img src="https://kouiketsu.github.io/images/post_3/1.png" alt="1"></li>
 <li>zlib库<pre class=" language-shell"><code class="language-shell">sudo apt-get install zlib1g-dev</code></pre>
@@ -479,7 +480,7 @@ sudo ./make.sh install</code></pre>
 tracker_server=自己ubuntu虚拟机的ip地址:22122</code></pre></li>
 </ul>
 <h3 id="3-7-启动tracker-和-storage"><a href="#3-7-启动tracker-和-storage" class="headerlink" title="3.7-启动tracker 和 storage"></a>3.7-启动tracker 和 storage</h3><ul>
-<li>没有提示即启动完成 可以通过ps命令查看后台运行情况<pre class=" language-shell"><code class="language-shell">sudo service fdfs_trackerd start
+<li>没有提示即启动完成,可以通过ps命令查看后台运行情况<pre class=" language-shell"><code class="language-shell">sudo service fdfs_trackerd start
 sudo service fdfs_storaged start</code></pre>
 </li>
 </ul>
@@ -487,7 +488,64 @@ sudo service fdfs_storaged start</code></pre>
 <li>上传文件测试<pre class=" language-shell"><code class="language-shell">fdfs_upload_file /etc/fdfs/client.conf 要上传的图片文件 </code></pre>
 如果出现下图所示内容即成功<br><img src="https://kouiketsu.github.io/images/post_3/5.png" alt="5"></li>
 </ul>
-<h2 id="4"><a href="#4" class="headerlink" title="4-"></a>4-</h2><script>
+<h2 id="4-FastDFS与Nginx进行交互"><a href="#4-FastDFS与Nginx进行交互" class="headerlink" title="4-FastDFS与Nginx进行交互"></a>4-FastDFS与Nginx进行交互</h2><h3 id="4-1-解压并编译ngnix"><a href="#4-1-解压并编译ngnix" class="headerlink" title="4.1-解压并编译ngnix"></a>4.1-解压并编译ngnix</h3><pre class=" language-shell"><code class="language-shell">  unzip nginx-1.8.1.tar.gz
+  unzip fastdfs-nginx-module-master.zip
+  cd nginx-1.8.1</code></pre>
+<h3 id="4-2-执行编译命令"><a href="#4-2-执行编译命令" class="headerlink" title="4.2-执行编译命令"></a>4.2-执行编译命令</h3><ul>
+<li>注意文件所在路径<pre class=" language-shell"><code class="language-shell">sudo ./configure --prefix=/usr/local/nginx/ --add-module=../fastdfs-nginx-module-master/src
+sudo ./make
+sudo ./make install</code></pre>
+</li>
+<li>若此处编译报错,表示未安装第2部分所提的依赖库</li>
+</ul>
+<h3 id="4-3-配置fastdfs-nginx文件"><a href="#4-3-配置fastdfs-nginx文件" class="headerlink" title="4.3-配置fastdfs-nginx文件"></a>4.3-配置fastdfs-nginx文件</h3><ul>
+<li><p>若上面的fastdfs-nginx-module-master.zip文件已经解压,执行</p>
+<pre class=" language-shell"><code class="language-shell">cd fastdfs-nginx-module-master/src
+sudo cp mod_fastdfs.conf  /etc/fdfs/mod_fastdfs.conf</code></pre>
+</li>
+<li><p>修改如下内容</p>
+<pre><code>sudo vim /etc/fdfs/mod_fastdfs.conf
+connect_timeout=10
+tracker_server=自己ubuntu虚拟机的ip地址:22122
+url_have_group_name=true
+store_path0=/home/thatsall/fastdfs/storage</code></pre><p><img src="https://kouiketsu.github.io/images/post_3/6.png" alt="6"></p>
+</li>
+<li><p>进入解压缩的fastdfs-master目录conf目录中,执行</p>
+<pre class=" language-shell"><code class="language-shell">sudo cp http.conf  /etc/fdfs/http.conf
+sudo cp mime.types /etc/fdfs/mime.types</code></pre>
+<h3 id="4-4-配置nginx文件"><a href="#4-4-配置nginx文件" class="headerlink" title="4.4-配置nginx文件"></a>4.4-配置nginx文件</h3></li>
+<li><p>修改nginx配置</p>
+<pre class=" language-shell"><code class="language-shell">sudo vim /usr/local/nginx/conf/nginx.conf</code></pre>
+</li>
+<li><p>在http部分中添加配置信息如下</p>
+<pre><code>  server {
+          listen       8888;
+          server_name  localhost;
+          location ~/group[0-9]/ {
+          ngx_fastdfs_module;
+      }
+          error_page   500 502 503 504  /50x.html;
+          location = /50x.html {
+          root   html;
+      }
+  }
+</code></pre><p><img src="https://kouiketsu.github.io/images/post_3/7.png" alt="7"></p>
+</li>
+</ul>
+<h3 id="4-5-启动nginx"><a href="#4-5-启动nginx" class="headerlink" title="4.5-启动nginx"></a>4.5-启动nginx</h3><pre class=" language-shell"><code class="language-shell">sudo /usr/local/nginx/sbin/nginx</code></pre>
+<ul>
+<li>没有提示即成功执行,可以通过ps命令查看后台运行情况</li>
+</ul>
+<h3 id="4-6-通过nginx访问经FDFS上传的文件"><a href="#4-6-通过nginx访问经FDFS上传的文件" class="headerlink" title="4.6-通过nginx访问经FDFS上传的文件"></a>4.6-通过nginx访问经FDFS上传的文件</h3><ul>
+<li>若上面配置已经完成,直接如下图所示进行访问<br><img src="https://kouiketsu.github.io/images/post_3/8.png" alt="8"></li>
+<li>端口后面的内容即FDFS上传文件所返回的值</li>
+</ul>
+<h2 id="5-参考资料"><a href="#5-参考资料" class="headerlink" title="5-参考资料"></a>5-参考资料</h2><ul>
+<li>FastDFS作者的Github <a href="https://github.com/happyfish100/fastdfs" target="_blank" rel="noopener">FastDFS</a></li>
+<li>简书：ubuntu下安装nginx时PCRE库、zlib库、OpenSSL库的安装 <a href="https://blog.csdn.net/somanlee/article/details/69808788" target="_blank" rel="noopener">简书</a></li>
+<li>最后向传智播客的老师表示感谢</li>
+</ul>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -530,7 +588,7 @@ sudo service fdfs_storaged start</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://kouiketsu.github.io/2020/02/26/ji-yi-ci-fastfds-de-pei-zhi-yi-ji-yu-nginx-jin-xing-jiao-hu/">https://kouiketsu.github.io/2020/02/26/ji-yi-ci-fastfds-de-pei-zhi-yi-ji-yu-nginx-jin-xing-jiao-hu/</a>
+                    <a href="https://kouiketsu.github.io/2020/02/26/ji-yi-ci-fastdfs-de-pei-zhi-yi-ji-yu-nginx-jin-xing-jiao-hu/">https://kouiketsu.github.io/2020/02/26/ji-yi-ci-fastdfs-de-pei-zhi-yi-ji-yu-nginx-jin-xing-jiao-hu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -615,13 +673,13 @@ sudo service fdfs_storaged start</code></pre>
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2020/02/26/ji-yi-ci-fastfds-de-pei-zhi-yi-ji-yu-nginx-jin-xing-jiao-hu/">
+                <a href="/2020/02/26/ji-yi-ci-fastdfs-de-pei-zhi-yi-ji-yu-nginx-jin-xing-jiao-hu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="记一次FastFDS的配置以及与Nginx进行交互">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="记一次FastDFS的配置以及与Nginx进行交互">
                         
-                        <span class="card-title">记一次FastFDS的配置以及与Nginx进行交互</span>
+                        <span class="card-title">记一次FastDFS的配置以及与Nginx进行交互</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -893,7 +951,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">2k</span>&nbsp;字
+                class="white-color">2.3k</span>&nbsp;字
             
             
             

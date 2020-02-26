@@ -378,6 +378,15 @@ FastDFS是一个开源高性能分布式文件系统(DFS)。它的主要功能�
                 </div>
                 <div class="col s5 right-align">
                     
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Python/" class="post-category">
+                                Python
+                            </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
 
@@ -399,7 +408,7 @@ FastDFS是一个开源高性能分布式文件系统(DFS)。它的主要功能�
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    601
+                    599
                 </div>
                 
 
@@ -428,28 +437,28 @@ FastDFS是一个开源高性能分布式文件系统(DFS)。它的主要功能�
 </ul>
 <h3 id="2-1-安装FDFS时系统所需依赖，防止后面文件make出错"><a href="#2-1-安装FDFS时系统所需依赖，防止后面文件make出错" class="headerlink" title="2.1-安装FDFS时系统所需依赖，防止后面文件make出错"></a>2.1-安装FDFS时系统所需依赖，防止后面文件make出错</h3><ul>
 <li>pcre库<pre class=" language-shell"><code class="language-shell">sudo apt-get install libpcre3 libpcre3-dev  </code></pre>
-<img src="https://kouiketsu.github.io/images/post_3/1.jpg" alt="1"></li>
+<img src="https://kouiketsu.github.io/images/post_3/1.png" alt="1"></li>
 <li>zlib库<pre class=" language-shell"><code class="language-shell">sudo apt-get install zlib1g-dev</code></pre>
-<img src="https://kouiketsu.github.io/images/post_3/2.jpg" alt="2"></li>
+<img src="https://kouiketsu.github.io/images/post_3/2.png" alt="2"></li>
 <li>OpenSSL库<pre class=" language-shell"><code class="language-shell">sudo apt-get install openssl libssl-dev </code></pre>
-<img src="https://kouiketsu.github.io/images/post_3/3.jpg" alt="3"></li>
+<img src="https://kouiketsu.github.io/images/post_3/3.png" alt="3"></li>
 </ul>
 <h2 id="3-FastDFS的安装"><a href="#3-FastDFS的安装" class="headerlink" title="3-FastDFS的安装"></a>3-FastDFS的安装</h2><h3 id="3-1-准备如下依赖包"><a href="#3-1-准备如下依赖包" class="headerlink" title="3.1-准备如下依赖包"></a>3.1-准备如下依赖包</h3><ul>
-<li><img src="https://kouiketsu.github.io/images/post_3/4.jpg" alt="4"></li>
+<li><img src="https://kouiketsu.github.io/images/post_3/4.png" alt="4"></li>
 <li>注意以下所有操作的目录都填写自己所创建的</li>
 <li>操作没有出错即完成</li>
 </ul>
-<h3 id="3-2-解压缩libfastcommon-master-zip"><a href="#3-2-解压缩libfastcommon-master-zip" class="headerlink" title="3.2-解压缩libfastcommon-master.zip"></a>3.2-解压缩libfastcommon-master.zip</h3><pre class=" language-shell"><code class="language-shell">  unzip libfastcommon-master.zip
-  cd libfastcommon-master
-  ./make
-  sudo ./make.sh install</code></pre>
-<h3 id="3-3-解压缩fastdfs-master-zip"><a href="#3-3-解压缩fastdfs-master-zip" class="headerlink" title="3.3-解压缩fastdfs-master.zip"></a>3.3-解压缩fastdfs-master.zip</h3><pre class=" language-shell"><code class="language-shell">  unzip fastdfs-master.zip
-  cd fastdfs-master
-  ./make.sh
-  sudo ./make.sh install</code></pre>
+<h3 id="3-2-解压缩libfastcommon-master-zip"><a href="#3-2-解压缩libfastcommon-master-zip" class="headerlink" title="3.2-解压缩libfastcommon-master.zip"></a>3.2-解压缩libfastcommon-master.zip</h3><pre class=" language-shell"><code class="language-shell">unzip libfastcommon-master.zip
+cd libfastcommon-master
+./make
+sudo ./make.sh install</code></pre>
+<h3 id="3-3-解压缩fastdfs-master-zip"><a href="#3-3-解压缩fastdfs-master-zip" class="headerlink" title="3.3-解压缩fastdfs-master.zip"></a>3.3-解压缩fastdfs-master.zip</h3><pre class=" language-shell"><code class="language-shell">unzip fastdfs-master.zip
+cd fastdfs-master
+./make.sh
+sudo ./make.sh install</code></pre>
 <h3 id="3-4-配置tracker服务器"><a href="#3-4-配置tracker服务器" class="headerlink" title="3.4-配置tracker服务器"></a>3.4-配置tracker服务器</h3><ul>
 <li>sudo cp /etc/fdfs/tracker.conf.sample /etc/fdfs/tracker.conf</li>
-<li>在家目录下创建目录fastdfs/tracker<pre class=" language-shell"><code class="language-shell"> mkdir –p /home/thatsall/fastdfs/tracker</code></pre>
+<li>在家目录下创建目录fastdfs/tracker<pre class=" language-shell"><code class="language-shell">mkdir –p /home/thatsall/fastdfs/tracker</code></pre>
 </li>
 <li>编辑/etc/fdfs/tracker.conf配置文件<pre class=" language-shell"><code class="language-shell">sudo vim /etc/fdfs/tracker.conf</code></pre>
 修改其中base_path一行为刚创建的tracker目录<pre><code>base_path=/home/thatsall/fastdfs/tracker</code></pre></li>
@@ -476,9 +485,9 @@ sudo service fdfs_storaged start</code></pre>
 </ul>
 <h3 id="3-8-测试是否安装成功"><a href="#3-8-测试是否安装成功" class="headerlink" title="3.8-测试是否安装成功"></a>3.8-测试是否安装成功</h3><ul>
 <li>上传文件测试<pre class=" language-shell"><code class="language-shell">fdfs_upload_file /etc/fdfs/client.conf 要上传的图片文件 </code></pre>
-如果出现下图所示内容即成功<br><img src="https://kouiketsu.github.io/images/post_3/5.jpg" alt="5"></li>
+如果出现下图所示内容即成功<br><img src="https://kouiketsu.github.io/images/post_3/5.png" alt="5"></li>
 </ul>
-<script>
+<h2 id="4"><a href="#4" class="headerlink" title="4-"></a>4-</h2><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -631,8 +640,12 @@ FastDFS是一个开源高性能分布式文件系统(DFS)。它的主要功能�
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            that's all
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
+                                </a>
+                            
                             
                         </span>
                     </div>
